@@ -93,12 +93,12 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
               <p className="text-xl font-medium">No conversations yet</p>
-              <p className="mt-2">Ask a question to get started!</p>
+              <p className="mt-2 ">Ask a question to get started!</p>
             </div>
           ) : (
             conversations.map((item) => (
-              <div key={item.id} className="space-y-2">
-                <ChatMessage isUser={true} content={item.query} timestamp={item.timestamp} />
+              <div key={item.id} className="space-y-2 text-black">
+                <ChatMessage isUser={true}  content={item.query} timestamp={item.timestamp} />
                 <ChatMessage isUser={false} content={item.response} timestamp={item.timestamp} />
               </div>
             ))
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
         
         {/* Input area */}
-        <div className="p-4 border-t border-gray-200 bg-white">
+        <div className="p-4 border-t border-gray-200 bg-white text-black">
           <ChatInput onSendQuery={handleSendQuery} isLoading={isLoading} />
         </div>
       </div>

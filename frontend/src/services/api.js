@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://192.168.250.52:8000/api';
 
 // Create axios instance with default config
 const apiClient = axios.create({
@@ -16,7 +16,7 @@ const apiClient = axios.create({
  */
 export const sendQuery = async (query) => {
   try {
-    const response = await apiClient.post('/query', { query });
+    const response = await apiClient.post('/qa/query', { query });
     return response.data;
   } catch (error) {
     console.error('API error:', error.response?.data || error.message);

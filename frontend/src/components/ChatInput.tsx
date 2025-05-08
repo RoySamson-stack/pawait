@@ -14,7 +14,6 @@ export default function ChatInput({ onSendQuery, isLoading }) {
   };
 
   const handleKeyDown = (e) => {
-    // Submit on Enter (without Shift key)
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSubmit(e);
