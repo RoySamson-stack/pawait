@@ -1,6 +1,4 @@
-"""
-Entry point script to run the FastAPI application.
-"""
+
 from app.main import app
 import uvicorn
 

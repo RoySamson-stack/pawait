@@ -4,15 +4,15 @@ from fastapi.responses import RedirectResponse
 from app.routes import qa
 
 app = FastAPI(
-    title="LLM Q&A API",
-    description="A FastAPI backend for an LLM-powered Q&A application",
+    title="pawait q&a assistant",
+    description="A FastAPI backend for a Q&A application",
     version="1.0.0",
 )
 
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify your frontend domain
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

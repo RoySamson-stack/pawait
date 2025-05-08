@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://192.168.250.52:8000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 // Create axios instance with default config
 const apiClient = axios.create({
@@ -25,7 +25,6 @@ export const sendQuery = async (query) => {
 };
 
 /**
- * Check the health status of the API
  * @returns {Promise<Object>} - The health status
  */
 export const checkApiHealth = async () => {
